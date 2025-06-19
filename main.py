@@ -12,7 +12,7 @@ elif sex=='Male':
     se=0
 
 with open ('model.pkl','rb') as f:
-    model=f.read()
+    model=pickle.load(f)
 
 if st.sidebar.button('Predict',key='predict_button'):
     input_data=[[pclass,se,age,fare]]
